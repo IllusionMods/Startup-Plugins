@@ -19,6 +19,8 @@ namespace IntroBegone
     [BepInDependency(KKAPI.KoikatuAPI.GUID, KKAPI.KoikatuAPI.VersionConst)]
     public partial class IntroBegonePlugin : BaseUnityPlugin
     {
+        public const string PluginName = "Intro speedup and autostart to maker";
+
         private static readonly Dictionary<string, Action<TitleScene>> _supportedArgs =
             new Dictionary<string, Action<TitleScene>>
             {

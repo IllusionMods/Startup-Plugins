@@ -16,10 +16,7 @@ namespace IntroBegone
     [BepInProcess("AI-Shoujo")]
     public partial class IntroBegonePlugin : BaseUnityPlugin
     {
-        protected const string SECTION_GENERAL = "General";
-
-        protected const string DESCRIPTION_AUTOSTART = "Choose which mode to start automatically when launching the game.\n" +
-                                                       "Hold esc or F1 during startup to cancel automatic behaviour or hold another shortcut to use that instead.";
+        public const string PluginName = "Autostart to maker";
 
         private static readonly Dictionary<string, Action<TitleScene>> _supportedArgs =
             new Dictionary<string, Action<TitleScene>>

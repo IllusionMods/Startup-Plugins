@@ -14,6 +14,8 @@ namespace IntroBegone
     [BepInDependency(KKAPI.KoikatuAPI.GUID, KKAPI.KoikatuAPI.VersionConst)]
     public partial class IntroBegonePlugin : BaseUnityPlugin
     {
+        public const string PluginName = "Maker button and autostart to maker";
+
         private static ConfigEntry<bool> _addMakerButton;
 
         private void Awake()
