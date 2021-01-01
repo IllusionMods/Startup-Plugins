@@ -1,12 +1,12 @@
 ﻿using System.Reflection;
 using System.Runtime.InteropServices;
-using PluginCode;
+using IntroBegone;
 
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyCompany("")]
 
-[assembly: AssemblyTitle(ExamplePlugin.PluginName)]
-[assembly: AssemblyProduct(ExamplePlugin.PluginName)]
+[assembly: AssemblyTitle(IntroBegonePlugin.PluginName)]
+[assembly: AssemblyProduct(IntroBegonePlugin.PluginName)]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 
 [assembly: AssemblyTrademark("")]
@@ -16,4 +16,4 @@ using PluginCode;
 [assembly: ComVisible(false)]
 [assembly: Guid("799e8918-d6e9-47af-9218-466d328960fc")]
 
-[assembly: AssemblyVersion(ExamplePlugin.Version)]
+[assembly: AssemblyVersion(IntroBegonePlugin.Version)]

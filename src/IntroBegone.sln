@@ -5,7 +5,16 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KK_IntroBegone", "KK_IntroBegone\KK_IntroBegone.csproj", "{799E8918-D6E9-47AF-9218-466D328960FC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PH_IntroBegone", "PH_IntroBegone\PH_IntroBegone.csproj", "{EB1A1274-848E-410F-8BFB-78880F74DEE3}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Shared_IntroBegone", "Shared_IntroBegone\Shared_IntroBegone.shproj", "{845D3E43-6691-4ADF-8B1C-E8F98015B547}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Shared_IntroBegone\Shared_IntroBegone.projitems*{799e8918-d6e9-47af-9218-466d328960fc}*SharedItemsImports = 4
+		Shared_IntroBegone\Shared_IntroBegone.projitems*{845d3e43-6691-4adf-8b1c-e8f98015b547}*SharedItemsImports = 13
+		Shared_IntroBegone\Shared_IntroBegone.projitems*{eb1a1274-848e-410f-8bfb-78880f74dee3}*SharedItemsImports = 4
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -15,6 +24,10 @@ Global
 		{799E8918-D6E9-47AF-9218-466D328960FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{799E8918-D6E9-47AF-9218-466D328960FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{799E8918-D6E9-47AF-9218-466D328960FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB1A1274-848E-410F-8BFB-78880F74DEE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB1A1274-848E-410F-8BFB-78880F74DEE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB1A1274-848E-410F-8BFB-78880F74DEE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB1A1274-848E-410F-8BFB-78880F74DEE3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
