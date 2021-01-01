@@ -22,11 +22,11 @@ namespace IntroBegone
             new Dictionary<string, Action<TitleScene>>
             {
                 {"-maker", scene => scene.OnCustomFemale()},
-                {"-makerf", scene => scene.OnCustomFemale()},
-                {"-makerm", scene => scene.OnCustomMale()},
+                {"-femalemaker", scene => scene.OnCustomFemale()},
+                {"-malemaker", scene => scene.OnCustomMale()},
                 //todo not supported since we rely on the fact the maker is started
-                //{"/freeh", scene => scene.OnOtherFreeH()},
-                //{"/live", scene => scene.OnOtherIdolLive()}
+                //{"-freeh", scene => scene.OnOtherFreeH()},
+                //{"-live", scene => scene.OnOtherIdolLive()}
             };
 
         private void Awake()
