@@ -42,10 +42,6 @@
       <HintPath>..\packages\IllusionLibs.PlayHome.Assembly-CSharp.2018.3.11.2\lib\net35\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\IllusionLibs.PlayHome.Assembly-CSharp-firstpass.2018.3.11.2\lib\net35\Assembly-CSharp-firstpass.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="BepInEx, Version=5.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\IllusionLibs.BepInEx.5.1.0\lib\net35\BepInEx.dll</HintPath>
       <Private>False</Private>
@@ -60,10 +56,6 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
     <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\IllusionLibs.PlayHome.UnityEngine.5.5.5.2\lib\net35\UnityEngine.dll</HintPath>
       <Private>False</Private>
@@ -91,10 +83,8 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\IllusionLibs.PlayHome.Assembly-CSharp.2018.3.11.2\build\IllusionLibs.PlayHome.Assembly-CSharp.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\IllusionLibs.PlayHome.Assembly-CSharp.2018.3.11.2\build\IllusionLibs.PlayHome.Assembly-CSharp.targets'))" />
     <Error Condition="!Exists('..\packages\IllusionLibs.PlayHome.UnityEngine.5.5.5.2\build\IllusionLibs.PlayHome.UnityEngine.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\IllusionLibs.PlayHome.UnityEngine.5.5.5.2\build\IllusionLibs.PlayHome.UnityEngine.targets'))" />
-    <Error Condition="!Exists('..\packages\IllusionLibs.PlayHome.Assembly-CSharp-firstpass.2018.3.11.2\build\IllusionLibs.PlayHome.Assembly-CSharp-firstpass.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\IllusionLibs.PlayHome.Assembly-CSharp-firstpass.2018.3.11.2\build\IllusionLibs.PlayHome.Assembly-CSharp-firstpass.targets'))" />
     <Error Condition="!Exists('..\packages\IllusionLibs.PlayHome.UnityEngine.UI.5.5.5.2\build\IllusionLibs.PlayHome.UnityEngine.UI.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\IllusionLibs.PlayHome.UnityEngine.UI.5.5.5.2\build\IllusionLibs.PlayHome.UnityEngine.UI.targets'))" />
   </Target>
   <Import Project="..\packages\IllusionLibs.PlayHome.UnityEngine.5.5.5.2\build\IllusionLibs.PlayHome.UnityEngine.targets" Condition="Exists('..\packages\IllusionLibs.PlayHome.UnityEngine.5.5.5.2\build\IllusionLibs.PlayHome.UnityEngine.targets')" />
-  <Import Project="..\packages\IllusionLibs.PlayHome.Assembly-CSharp-firstpass.2018.3.11.2\build\IllusionLibs.PlayHome.Assembly-CSharp-firstpass.targets" Condition="Exists('..\packages\IllusionLibs.PlayHome.Assembly-CSharp-firstpass.2018.3.11.2\build\IllusionLibs.PlayHome.Assembly-CSharp-firstpass.targets')" />
   <Import Project="..\packages\IllusionLibs.PlayHome.UnityEngine.UI.5.5.5.2\build\IllusionLibs.PlayHome.UnityEngine.UI.targets" Condition="Exists('..\packages\IllusionLibs.PlayHome.UnityEngine.UI.5.5.5.2\build\IllusionLibs.PlayHome.UnityEngine.UI.targets')" />
 </Project>
