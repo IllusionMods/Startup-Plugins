@@ -9,8 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PH_IntroBegone", "PH_IntroB
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Shared_IntroBegone", "Shared_IntroBegone\Shared_IntroBegone.shproj", "{845D3E43-6691-4ADF-8B1C-E8F98015B547}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HS_IntroBegone", "HS_IntroBegone\HS_IntroBegone.csproj", "{6A7A2CC4-AC8E-4B69-A330-CA4A9AB3BFD7}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Shared_IntroBegone\Shared_IntroBegone.projitems*{6a7a2cc4-ac8e-4b69-a330-ca4a9ab3bfd7}*SharedItemsImports = 4
 		Shared_IntroBegone\Shared_IntroBegone.projitems*{799e8918-d6e9-47af-9218-466d328960fc}*SharedItemsImports = 4
 		Shared_IntroBegone\Shared_IntroBegone.projitems*{845d3e43-6691-4adf-8b1c-e8f98015b547}*SharedItemsImports = 13
 		Shared_IntroBegone\Shared_IntroBegone.projitems*{eb1a1274-848e-410f-8bfb-78880f74dee3}*SharedItemsImports = 4
@@ -28,6 +31,10 @@ Global
 		{EB1A1274-848E-410F-8BFB-78880F74DEE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB1A1274-848E-410F-8BFB-78880F74DEE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB1A1274-848E-410F-8BFB-78880F74DEE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A7A2CC4-AC8E-4B69-A330-CA4A9AB3BFD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A7A2CC4-AC8E-4B69-A330-CA4A9AB3BFD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A7A2CC4-AC8E-4B69-A330-CA4A9AB3BFD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A7A2CC4-AC8E-4B69-A330-CA4A9AB3BFD7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
