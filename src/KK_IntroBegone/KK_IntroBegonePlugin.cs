@@ -16,6 +16,7 @@ namespace IntroBegone
 {
     [BepInProcess("Koikatu")]
     [BepInProcess("Koikatsu Party")]
+    [BepInDependency(KKAPI.KoikatuAPI.GUID, KKAPI.KoikatuAPI.VersionConst)]
     public partial class IntroBegonePlugin : BaseUnityPlugin
     {
         private static readonly Dictionary<string, Action<TitleScene>> _supportedArgs =

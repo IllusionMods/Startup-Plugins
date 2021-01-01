@@ -1,11 +1,9 @@
 ﻿using BepInEx;
 using BepInEx.Logging;
-using KKAPI;
 
 namespace IntroBegone
 {
     [BepInPlugin(GUID, PluginName, Version)]
-    [BepInDependency(KoikatuAPI.GUID, KoikatuAPI.VersionConst)]
     public partial class IntroBegonePlugin : BaseUnityPlugin
     {
         public const string PluginName = "Intro Begone";

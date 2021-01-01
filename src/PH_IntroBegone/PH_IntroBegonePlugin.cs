@@ -9,6 +9,9 @@ using UnityEngine.UI;
 
 namespace IntroBegone
 {
+    [BepInProcess("PlayHome32bit")]
+    [BepInProcess("PlayHome64bit")]
+    [BepInDependency(KKAPI.KoikatuAPI.GUID, KKAPI.KoikatuAPI.VersionConst)]
     public partial class IntroBegonePlugin : BaseUnityPlugin
     {
         private static ConfigEntry<bool> _addMakerButton;

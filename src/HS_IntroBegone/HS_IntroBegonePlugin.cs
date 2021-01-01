@@ -31,7 +31,6 @@ namespace IntroBegone
 
         private bool _checkInput;
         private bool _cancelAuto;
-        private bool _firstLaunch = true;
         private TitleScene _titleScene;
         private Action<TitleScene> _autostartCommand = null;
 
@@ -45,6 +44,8 @@ namespace IntroBegone
 
         private void OnLevelWasLoaded(int level)
         {
+            StopAllCoroutines();
+
             _titleScene = FindObjectOfType<TitleScene>();
 
             if (_titleScene)
@@ -76,6 +77,7 @@ namespace IntroBegone
                     if (_autostartCommand != null)
                     {
                         _autostartCommand(_titleScene);
+                        _autostartCommand = null;
                         _checkInput = false;
                     }
                     else if (!_cancelAuto && AutoStart.Value != AutoStartOption.Disabled)
@@ -99,7 +101,6 @@ namespace IntroBegone
 
                 void StartMode(Action action, string msg)
                 {
-                    _firstLaunch = false;
                     if (!FindObjectOfType<ConfigScene>())
                     {
                         Logger.LogMessage(msg);
