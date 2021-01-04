@@ -7,8 +7,8 @@
     <ProjectGuid>{EB1A1274-848E-410F-8BFB-78880F74DEE3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>IntroBegone</RootNamespace>
-    <AssemblyName>PH_IntroBegone</AssemblyName>
+    <RootNamespace>Autostart</RootNamespace>
+    <AssemblyName>PH_Autostart</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -69,12 +69,12 @@
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PH_IntroBegonePlugin.cs" />
+    <Compile Include="PH_AutostartPlugin.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <Import Project="..\Shared_IntroBegone\Shared_IntroBegone.projitems" Label="Shared" />
+  <Import Project="..\Shared_Autostart\Shared_Autostart.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\IllusionLibs.PlayHome.Assembly-CSharp.2018.3.11.2\build\IllusionLibs.PlayHome.Assembly-CSharp.targets" Condition="Exists('..\packages\IllusionLibs.PlayHome.Assembly-CSharp.2018.3.11.2\build\IllusionLibs.PlayHome.Assembly-CSharp.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

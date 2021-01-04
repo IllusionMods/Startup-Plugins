@@ -3,21 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using AIProject;
 using BepInEx;
 using BepInEx.Configuration;
+using BepInEx.Logging;
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.SceneManagement;
 
-namespace IntroBegone
+namespace Autostart
 {
-    [BepInProcess("AI-Syoujyo")]
-    [BepInProcess("AI-Shoujo")]
-    public partial class IntroBegonePlugin : BaseUnityPlugin
+    [BepInProcess("HoneySelect_32")]
+    [BepInProcess("HoneySelect_64")]
+    public partial class AutostartPlugin : BaseUnityPlugin
     {
-        public const string PluginName = "Autostart to maker";
-
         private static readonly Dictionary<string, Action<TitleScene>> _supportedArgs =
             new Dictionary<string, Action<TitleScene>>
             {
@@ -31,18 +27,17 @@ namespace IntroBegone
         private bool _checkInput;
         private bool _cancelAuto;
         private TitleScene _titleScene;
-        private Action<TitleScene> _autostartCommand;
+        private Action<TitleScene> _autostartCommand = null;
 
         private void Awake()
         {
             // Check if any autostart parameters were passed
             var _ = Environment.GetCommandLineArgs().FirstOrDefault(x => _supportedArgs.TryGetValue(x.ToLowerInvariant(), out _autostartCommand));
-            AutoStart = Config.Bind(SECTION_GENERAL, "Automatic start mode", AutoStartOption.Disabled, new ConfigDescription(DESCRIPTION_AUTOSTART));
 
-            SceneManager.sceneLoaded += StartInput;
+            AutoStart = Config.Bind(SECTION_GENERAL, "Automatic start mode", AutoStartOption.Disabled, new ConfigDescription(DESCRIPTION_AUTOSTART));
         }
 
-        private void StartInput(Scene scene, LoadSceneMode mode)
+        private void OnLevelWasLoaded(int level)
         {
             StopAllCoroutines();
 
@@ -68,7 +63,7 @@ namespace IntroBegone
             {
                 if (!_cancelAuto && AutoStart.Value != AutoStartOption.Disabled && (Input.GetKey(KeyCode.Escape) || Input.GetKey(KeyCode.F1)))
                 {
-                    Logger.Log(BepInEx.Logging.LogLevel.Message, "Automatic start cancelled");
+                    base.Logger.Log(LogLevel.Message, "Automatic start cancelled");
                     _cancelAuto = true;
                 }
 
@@ -98,16 +93,16 @@ namespace IntroBegone
                 }
 
                 yield return null;
-            }
-        }
 
-        private void StartMode(UnityAction action, string msg)
-        {
-            if (!FindObjectOfType<ConfigScene.ConfigWindow>())
-            {
-                Logger.LogMessage(msg);
-                _checkInput = false;
-                action();
+                void StartMode(Action action, string msg)
+                {
+                    if (!FindObjectOfType<ConfigScene>())
+                    {
+                        base.Logger.LogMessage(msg);
+                        _checkInput = false;
+                        action();
+                    }
+                }
             }
         }
 
@@ -120,5 +115,4 @@ namespace IntroBegone
             MaleMaker
         }
     }
-
 }

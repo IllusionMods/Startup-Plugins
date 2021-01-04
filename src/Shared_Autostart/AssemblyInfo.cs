@@ -1,12 +1,12 @@
 ﻿using System.Reflection;
 using System.Runtime.InteropServices;
-using IntroBegone;
+using Autostart;
 
 [assembly: AssemblyDescription("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("https://github.com/IllusionMods/IntroBegone")]
 
-[assembly: AssemblyTitle(IntroBegonePlugin.PluginName)]
-[assembly: AssemblyProduct(IntroBegonePlugin.PluginName)]
+[assembly: AssemblyTitle(AutostartPlugin.PluginName)]
+[assembly: AssemblyProduct(AutostartPlugin.PluginName)]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 
 [assembly: AssemblyTrademark("")]
@@ -16,4 +16,4 @@ using IntroBegone;
 [assembly: ComVisible(false)]
 [assembly: Guid("799e8918-d6e9-47af-9218-466d328960fc")]
 
-[assembly: AssemblyVersion(IntroBegonePlugin.Version)]
+[assembly: AssemblyVersion(AutostartPlugin.Version)]

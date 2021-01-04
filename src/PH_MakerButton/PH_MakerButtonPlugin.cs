@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using BepInEx;
 using BepInEx.Configuration;
 using HarmonyLib;
@@ -7,15 +6,13 @@ using KKAPI.Utilities;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace IntroBegone
+namespace AddMakerButton
 {
     [BepInProcess("PlayHome32bit")]
     [BepInProcess("PlayHome64bit")]
     [BepInDependency(KKAPI.KoikatuAPI.GUID, KKAPI.KoikatuAPI.VersionConst)]
-    public partial class IntroBegonePlugin : BaseUnityPlugin
+    public partial class MakerButtonPlugin : BaseUnityPlugin
     {
-        public const string PluginName = "Maker button and autostart to maker";
-
         private static ConfigEntry<bool> _addMakerButton;
 
         private void Awake()
@@ -23,30 +20,13 @@ namespace IntroBegone
             _addMakerButton = Config.Bind("Main menu", "Add Character Maker button", true,
                 "Adds a 'Character Maker' button to the main menu, so you can open it directly wihtout having to start a new game.");
 
-            Harmony.CreateAndPatchAll(typeof(Hooks), GUID);
+            if (_addMakerButton.Value)
+                Harmony.CreateAndPatchAll(typeof(Hooks), GUID);
         }
 
         private static class Hooks
         {
-            private static bool _roadwayToMaker;
             private static bool _usedMakerButton;
-
-            [HarmonyPostfix]
-            [HarmonyPatch(typeof(CautionScene), "Start")]
-            private static void CautionSceneOverridePatch(CautionScene __instance)
-            {
-                _roadwayToMaker = Environment.GetCommandLineArgs().Any(x => x == "-maker");
-                if (_roadwayToMaker)
-                    __instance.GC.ChangeScene(__instance.nextScene, __instance.nextMessage, 0);
-            }
-
-            [HarmonyPostfix]
-            [HarmonyPatch(typeof(LogoScene), "Start")]
-            private static void LogoSceneOverridePatch(LogoScene __instance)
-            {
-                if (_roadwayToMaker)
-                    __instance.GC.ChangeScene(__instance.nextScene, __instance.nextMessage, 0);
-            }
 
             private static void StartMaker(float fadeTime, TitleScene __instance)
             {
@@ -58,7 +38,7 @@ namespace IntroBegone
             [HarmonyPatch(typeof(TitleScene), "Start")]
             private static void TitleSceneAddMakerButtonPatch(TitleScene __instance, ref Button[] ___buttons)
             {
-                if (!_roadwayToMaker && _addMakerButton.Value)
+                if (!_addMakerButton.Value)
                 {
                     // Create a new Maker button
                     var startButton = ___buttons[1];
@@ -86,36 +66,11 @@ namespace IntroBegone
                 }
             }
 
-            [HarmonyPrefix]
-            [HarmonyPatch(typeof(TitleScene), "ShowButtons")]
-            private static bool TitleSceneOverridePatch(TitleScene __instance, ref System.Collections.IEnumerator __result)
-            {
-                if (_roadwayToMaker)
-                {
-                    __result = CoroutineUtils.CreateCoroutine(() => StartMaker(0f, __instance));
-                    return false;
-                }
-
-                return true;
-            }
-
             [HarmonyPostfix]
             [HarmonyPatch(typeof(EditScene), "Start")]
             private static void EditSceneBackButtonOverridePatch(EditScene __instance, Button ___toReturn)
             {
-                if (_roadwayToMaker)
-                {
-                    ___toReturn.onClick.ActuallyRemoveAllListeners();
-                    var txt = ___toReturn.GetComponentInChildren<Text>();
-                    txt.text = "Exit game";
-                    ___toReturn.onClick.AddListener(() =>
-                        __instance.GC.CreateModalYesNoUI(
-                            "Are you sure you want to exit the game?\nUnsaved changes will be lost.",
-                            Application.Quit));
-
-                    GameObject.Find("Pause Menue Canvas(Clone)/Buttons/Button Title")?.SetActive(false);
-                }
-                else if (_usedMakerButton)
+                if (_usedMakerButton)
                 {
                     ___toReturn.onClick.ActuallyRemoveAllListeners();
                     var txt = ___toReturn.GetComponentInChildren<Text>();

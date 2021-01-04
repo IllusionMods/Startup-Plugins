@@ -6,10 +6,10 @@
     <SharedGUID>845d3e43-6691-4adf-8b1c-e8f98015b547</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
-    <Import_RootNamespace>Shared_IntroBegone</Import_RootNamespace>
+    <Import_RootNamespace>Shared_Autostart</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)AssemblyInfo.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)IntroBegonePlugin.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AutostartPlugin.cs" />
   </ItemGroup>
 </Project>
