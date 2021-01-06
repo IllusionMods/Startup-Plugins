@@ -19,12 +19,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Autostart", "Autostart", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PH_MakerButton", "PH_MakerButton\PH_MakerButton.csproj", "{C15E3A50-EC2C-4D34-882B-BA8E5B932134}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HS2_Autostart", "HS2_Autostart\HS2_Autostart.csproj", "{DBA5D6BA-6198-4CF6-ACD7-ED3EEC835625}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Shared_Autostart\Shared_Autostart.projitems*{6a7a2cc4-ac8e-4b69-a330-ca4a9ab3bfd7}*SharedItemsImports = 4
 		Shared_Autostart\Shared_Autostart.projitems*{799e8918-d6e9-47af-9218-466d328960fc}*SharedItemsImports = 4
 		Shared_Autostart\Shared_Autostart.projitems*{845d3e43-6691-4adf-8b1c-e8f98015b547}*SharedItemsImports = 13
 		Shared_Autostart\Shared_Autostart.projitems*{914f7c11-7c05-4281-b8fb-e99d7f3582d0}*SharedItemsImports = 4
+		Shared_Autostart\Shared_Autostart.projitems*{dba5d6ba-6198-4cf6-acd7-ed3eec835625}*SharedItemsImports = 4
 		Shared_Autostart\Shared_Autostart.projitems*{eb1a1274-848e-410f-8bfb-78880f74dee3}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -56,6 +59,10 @@ Global
 		{C15E3A50-EC2C-4D34-882B-BA8E5B932134}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C15E3A50-EC2C-4D34-882B-BA8E5B932134}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C15E3A50-EC2C-4D34-882B-BA8E5B932134}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBA5D6BA-6198-4CF6-ACD7-ED3EEC835625}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBA5D6BA-6198-4CF6-ACD7-ED3EEC835625}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBA5D6BA-6198-4CF6-ACD7-ED3EEC835625}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBA5D6BA-6198-4CF6-ACD7-ED3EEC835625}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,6 +73,7 @@ Global
 		{845D3E43-6691-4ADF-8B1C-E8F98015B547} = {2319365B-CE1C-4FB4-8725-25A33645DC33}
 		{6A7A2CC4-AC8E-4B69-A330-CA4A9AB3BFD7} = {2319365B-CE1C-4FB4-8725-25A33645DC33}
 		{914F7C11-7C05-4281-B8FB-E99D7F3582D0} = {2319365B-CE1C-4FB4-8725-25A33645DC33}
+		{DBA5D6BA-6198-4CF6-ACD7-ED3EEC835625} = {2319365B-CE1C-4FB4-8725-25A33645DC33}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FDFF1C20-A8AF-42FB-8BD8-4B5087BC50F3}

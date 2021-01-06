@@ -17,7 +17,7 @@ namespace Autostart
 
         private void Awake()
         {
-            _roadwayToMaker = Environment.GetCommandLineArgs().Any(x => x.ToLower() == "-maker");
+            _roadwayToMaker = Environment.GetCommandLineArgs().Select(x => x.ToLower()).Any(x => x == "-maker" || x == "-femalemaker");
 
             if (_roadwayToMaker)
                 Harmony.CreateAndPatchAll(typeof(Hooks), GUID);
@@ -46,7 +46,7 @@ namespace Autostart
                 var msg = EditScene.CreateMessage("律子", "GameStart");
                 __instance.GC.ChangeScene("EditScene", msg, fadeTime);
             }
-            
+
             [HarmonyPrefix]
             [HarmonyPatch(typeof(TitleScene), "ShowButtons")]
             private static bool TitleSceneOverridePatch(TitleScene __instance, ref System.Collections.IEnumerator __result)

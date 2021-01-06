@@ -3,25 +3,24 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using AIProject;
 using BepInEx;
 using BepInEx.Configuration;
+using HS2;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 namespace Autostart
 {
-    [BepInProcess("AI-Syoujyo")]
-    [BepInProcess("AI-Shoujo")]
+    [BepInProcess("HoneySelect2")]
     public partial class AutostartPlugin : BaseUnityPlugin
     {
         private static readonly Dictionary<string, Action<TitleScene>> _supportedArgs =
             new Dictionary<string, Action<TitleScene>>
             {
-                {"-maker", scene => scene.OnCustomFemale()},
-                {"-femalemaker", scene => scene.OnCustomFemale()},
-                {"-malemaker", scene => scene.OnCustomMale()},
+                {"-maker", scene => scene.OnMakeFemale()},
+                {"-femalemaker", scene => scene.OnMakeFemale()},
+                {"-malemaker", scene => scene.OnMakeMale()},
             };
 
         private ConfigEntry<AutoStartOption> AutoStart { get; set; }
@@ -61,7 +60,7 @@ namespace Autostart
                     _cancelAuto = true;
                 }
 
-                if (!Manager.Scene.Instance.IsNowLoadingFade)
+                if (!Manager.Scene.IsNowLoadingFade)
                 {
                     if (_autostartCommand != null)
                     {
@@ -74,11 +73,11 @@ namespace Autostart
                         switch (AutoStart.Value)
                         {
                             case AutoStartOption.FemaleMaker:
-                                StartMode(_titleScene.OnCustomFemale, "Automatically starting female maker");
+                                StartMode(_titleScene.OnMakeFemale, "Automatically starting female maker");
                                 break;
 
                             case AutoStartOption.MaleMaker:
-                                StartMode(_titleScene.OnCustomMale, "Automatically starting male maker");
+                                StartMode(_titleScene.OnMakeMale, "Automatically starting male maker");
                                 break;
                         }
                     }

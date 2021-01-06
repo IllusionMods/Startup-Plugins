@@ -9,7 +9,7 @@ namespace Autostart
         public const string GUID = "Autostart";
         public const string Version = "1.0.0";
         
-        public const string PluginName = "Autostart maker";
+        public const string PluginName = "Autostart";
 
         protected const string SECTION_GENERAL = "General";
         protected const string DESCRIPTION_AUTOSTART = "Choose which mode to start automatically when launching the game.\n" +
