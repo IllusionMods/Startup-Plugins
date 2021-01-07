@@ -14,6 +14,7 @@ It also adds a config setting to load directly into character maker when startin
 This feature was originally a part of TitleShortcuts [here](https://github.com/Keelhauled/KeelPlugins).
 
 #### How to use
+0. Update [TitleShortcuts](https://github.com/Keelhauled/KeelPlugins) to latest version if you have it to avoid potential compatibility issues.
 1. Install the plugin by following steps above.
 2. Create a shortcut to main game .exe file (for example Koikatu.exe).
 3. Go to properties of the shortcut.
