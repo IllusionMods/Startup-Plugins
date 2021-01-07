@@ -38,7 +38,7 @@ namespace AddMakerButton
             [HarmonyPatch(typeof(TitleScene), "Start")]
             private static void TitleSceneAddMakerButtonPatch(TitleScene __instance, ref Button[] ___buttons)
             {
-                if (!_addMakerButton.Value)
+                if (_addMakerButton.Value)
                 {
                     // Create a new Maker button
                     var startButton = ___buttons[1];
