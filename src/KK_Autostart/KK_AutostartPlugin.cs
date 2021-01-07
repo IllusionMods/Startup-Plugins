@@ -51,6 +51,8 @@ namespace Autostart
             {
                 IEnumerator LoadTitle()
                 {
+                    Logger.LogInfo("Skipping intro and entering maker");
+
                     // Keep the splash screen to hide title menu and loading screens flashing by during load
                     var logoC = __instance.GetComponentInChildren<Canvas>();
                     var logoCg = logoC.GetOrAddComponent<CanvasGroup>();

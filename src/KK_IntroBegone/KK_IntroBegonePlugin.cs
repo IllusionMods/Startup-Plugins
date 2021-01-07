@@ -27,6 +27,7 @@ namespace IntroBegone
             {
                 IEnumerator LoadTitle()
                 {
+                    Logger.LogInfo("Skipping intro");
                     Singleton<Scene>.Instance.LoadReserve(new Scene.Data
                     {
                         levelName = "Title",
