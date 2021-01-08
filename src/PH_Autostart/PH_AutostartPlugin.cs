@@ -53,7 +53,8 @@ namespace Autostart
             {
                 if (_roadwayToMaker)
                 {
-                    __result = CoroutineUtils.CreateCoroutine(() => StartMaker(0f, __instance));
+                    // Need to wait for a few seconds because DHH breaks if the game starts too fast
+                    __result = CoroutineUtils.CreateCoroutine(new WaitForSeconds(2.5f), () => StartMaker(0f, __instance));
                     return false;
                 }
 
