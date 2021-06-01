@@ -78,6 +78,7 @@ namespace AddMakerButton
                     ___toReturn.onClick.AddListener(() => __instance.GC.CreateModalYesNoUI(
                         "Are you sure you want to go back to the title screen?\nUnsaved changes will be lost.",
                         () => { __instance.GC.ChangeScene("TitleScene", "", 1); }));
+                    _usedMakerButton = false;
                 }
             }
         }
