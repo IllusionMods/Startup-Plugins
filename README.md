@@ -24,7 +24,7 @@ This feature was originally a part of TitleShortcuts [here](https://github.com/K
 - `-maker` and `-femalemaker` - Start female character maker.
 - `-malemaker` - Start male character maker (if the game has one).
 
-## IntroBegone (KK)
+## IntroBegone (KK KKS)
 Speeds up game startup by skipping intro screens. Can be disabled in plugin settings to get the default intro screens back.
 
 ## PH_MakerButton
