@@ -7,7 +7,7 @@ namespace Autostart
     public partial class AutostartPlugin : BaseUnityPlugin
     {
         public const string GUID = "Autostart";
-        public const string Version = "1.0.1";
+        public const string Version = "1.1";
         
         public const string PluginName = "Autostart";
 

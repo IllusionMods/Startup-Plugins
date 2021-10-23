@@ -7,7 +7,7 @@ namespace IntroBegone
     public partial class IntroBegonePlugin : BaseUnityPlugin
     {
         public const string GUID = "IntroBegone";
-        public const string Version = "1.0.0";
+        public const string Version = "1.1";
         
         public const string PluginName = "Intro Begone";
 
