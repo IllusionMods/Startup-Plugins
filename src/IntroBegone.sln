@@ -27,10 +27,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KKS_IntroBegone", "KKS_Intr
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Core_IntroBegone", "Core_IntroBegone\Core_IntroBegone.shproj", "{0380C6DC-A96E-4CFE-ACF5-E634D66039CD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KKS_Autostart", "KKS_Autostart\KKS_Autostart.csproj", "{5BDDE78F-17D2-4185-881D-B0E421411012}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Core_IntroBegone\Core_IntroBegone.projitems*{0380c6dc-a96e-4cfe-acf5-e634d66039cd}*SharedItemsImports = 13
 		Core_IntroBegone\Core_IntroBegone.projitems*{48c672c8-3309-4809-ace6-6fa70129c352}*SharedItemsImports = 4
+		Shared_Autostart\Shared_Autostart.projitems*{5bdde78f-17d2-4185-881d-b0e421411012}*SharedItemsImports = 4
 		Shared_Autostart\Shared_Autostart.projitems*{6a7a2cc4-ac8e-4b69-a330-ca4a9ab3bfd7}*SharedItemsImports = 4
 		Shared_Autostart\Shared_Autostart.projitems*{799e8918-d6e9-47af-9218-466d328960fc}*SharedItemsImports = 4
 		Shared_Autostart\Shared_Autostart.projitems*{845d3e43-6691-4adf-8b1c-e8f98015b547}*SharedItemsImports = 13
@@ -76,6 +79,10 @@ Global
 		{CFA629C6-4C0D-4300-AD97-609B6D12FC12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CFA629C6-4C0D-4300-AD97-609B6D12FC12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CFA629C6-4C0D-4300-AD97-609B6D12FC12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BDDE78F-17D2-4185-881D-B0E421411012}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BDDE78F-17D2-4185-881D-B0E421411012}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BDDE78F-17D2-4185-881D-B0E421411012}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BDDE78F-17D2-4185-881D-B0E421411012}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -90,6 +97,7 @@ Global
 		{DBA5D6BA-6198-4CF6-ACD7-ED3EEC835625} = {2319365B-CE1C-4FB4-8725-25A33645DC33}
 		{CFA629C6-4C0D-4300-AD97-609B6D12FC12} = {CA94D6D1-CB3C-4BA5-8D50-F26AB3915CD4}
 		{0380C6DC-A96E-4CFE-ACF5-E634D66039CD} = {CA94D6D1-CB3C-4BA5-8D50-F26AB3915CD4}
+		{5BDDE78F-17D2-4185-881D-B0E421411012} = {2319365B-CE1C-4FB4-8725-25A33645DC33}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FDFF1C20-A8AF-42FB-8BD8-4B5087BC50F3}
