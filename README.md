@@ -2,7 +2,7 @@
 A collection of BepInEx plugins for Illusion games that skip game startup screens or let you directly start character maker with a special game shortcut. Currently supports HoneySelect, PlayHome, Koikatu/Koikatsu, AI-Syoujyo/AI-Shoujo and HoneySelect2.
 
 ## How to install
-1. Install latest versions of [BepInEx 5.x](https://github.com/BepInEx/BepInEx) and [ModdingAPI](https://github.com/IllusionMods/IllusionModdingAPI).
+1. Install latest versions of [BepInEx 5.x](https://github.com/BepInEx/BepInEx) and [ModdingAPI](https://gitgoon.dev/IllusionMods/IllusionModdingAPI).
 2. Download latest release for your game from releases (KK = version for Koikatsu).
 3. Extract the release zip inside your game directory. The BepInEx directory inside the archive should be merged with BepInEx folder in your game directory.
 
@@ -11,10 +11,10 @@ Adds support for commandline arguments to start certain modes automatically duri
 
 It also adds a config setting to load directly into character maker when starting the game normally (no need for a shortcut, hold `esc` when game is starting to cancel). The config settings are only available in AI, HS and HS2.
 
-This feature was originally a part of TitleShortcuts [here](https://github.com/Keelhauled/KeelPlugins).
+This feature was originally a part of TitleShortcuts [here](https://gitgoon.dev/IllusionMods/KeelPlugins).
 
 #### How to use
-0. Update [TitleShortcuts](https://github.com/Keelhauled/KeelPlugins) to latest version if you have it to avoid potential compatibility issues.
+0. Update [TitleShortcuts](https://gitgoon.dev/IllusionMods/KeelPlugins) to latest version if you have it to avoid potential compatibility issues.
 1. Install the plugin by following steps above.
 2. Create a shortcut to main game .exe file (for example Koikatu.exe).
 3. Go to properties of the shortcut.
@@ -29,5 +29,3 @@ Speeds up game startup by skipping intro screens. Can be disabled in plugin sett
 
 ## PH_MakerButton
 Adds a "Character maker" button to main menu in PlayHome.
-
-![preview](https://user-images.githubusercontent.com/39247311/103837081-4009ea80-508b-11eb-8069-c107bcad88b9.png)

@@ -1,9 +1,9 @@
-﻿using System.Reflection;
+using System.Reflection;
 using System.Runtime.InteropServices;
 using AddMakerButton;
 
 [assembly: AssemblyDescription("")]
-[assembly: AssemblyCompany("https://github.com/IllusionMods/IntroBegone")]
+[assembly: AssemblyCompany("https://gitgoon.dev/IllusionMods/IntroBegone")]
 
 [assembly: AssemblyTitle(MakerButtonPlugin.PluginName)]
 [assembly: AssemblyProduct(MakerButtonPlugin.PluginName)]
